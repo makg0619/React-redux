@@ -1,6 +1,9 @@
-import React from 'react'
+import React from 'react';
+import { useSelector } from 'react-redux';
+import Contact from './contact'
 
 const Contacts = () => {
+  const contacts = useSelector(state => state.contacts )
   return (
     <table className="table shadow">
         <thead>
@@ -25,23 +28,11 @@ const Contacts = () => {
           </tr>
         </thead>
         <tbody>
-        <tr>
-            <th scope="row">1</th>
-            <td>Mark</td>
-            <td>Otto</td>
-            <td>@mdo</td>
-          </tr>
-          <tr>
-            <th scope="row">2</th>
-            <td>Jacob</td>
-            <td>Thornton</td>
-            <td>@fat</td>
-          </tr>
-          <tr>
-            <th scope="row">3</th>
-            <td colspan="2">Larry the Bird</td>
-            <td>@twitter</td>
-          </tr>
+          {
+            contacts.map((contact)=> (
+              <Contact contact={contact} />
+            ))
+          }
         </tbody>
       </table>
   )
