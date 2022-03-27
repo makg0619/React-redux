@@ -39,3 +39,16 @@ $theme-colors: (
 npm i react-avatar
 2. Add google icons
 <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
+## step 5
+
+1. Install react roter dom
+npm install react-router-dom
+
+## step 6
+
+1. create add contact page
+2. In store create add contact action
+3. dispatch this action on addcontact page
+
+action > reducer > dispatch

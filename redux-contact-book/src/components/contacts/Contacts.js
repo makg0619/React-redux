@@ -1,9 +1,9 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
-import Contact from './contact'
+import Contact from './Contact'
 
 const Contacts = () => {
-  const contacts = useSelector(state => state.contacts )
+  const contacts = useSelector(state => state.contact.contacts )
   return (
     <table className="table shadow">
         <thead>
